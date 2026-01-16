@@ -1,17 +1,20 @@
 // This program takes in the user data for: Their name; How many days they birded; How many hours they birded; How many birds they saw; and if it is winter or not.
 // This program outputs if the user had a good or bad birding day as well as a table of the user's statistics.
-//
 
+//io stream is for inputs/outputs; string is for strings ; iomanip is to manipulate input/output data; fstream is to send and recieve data from files; windows.h is to help set colors to text.
 #include <iostream>
 #include <string>
 #include <iomanip>
 #include <fstream>
 #include <windows.h>
 
+// namespace is used to remove std:: before statements; hConsole is used to change text color; enum season is a user defined function to figure out what season it is
 using namespace std;
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 enum season { Winter, Spring, Summer, Fall };
 
+// class for birdtracker is used to store user's name, how many days they went birding, hours they went birding, birds they saw, and the average amount of birds they saw per hour.
+// in the private modifier it has the daycheck array and uses setDayCheck to set the days they went birding and getDayCheck is made to display/give that data later on.
 class birdtracker {
 
 public:
@@ -56,6 +59,7 @@ void printtable(const birdtracker::birdstats& user, const birdtracker& tracker, 
 
 int main()
 {
+    // variables declared at the start of main, such as using the birdtracker class and assigning it to tracker as well as declaring birdstats within birdtracker and assigning it to user.
     birdtracker tracker;
     birdtracker::birdstats user;
     const int week = 7;
