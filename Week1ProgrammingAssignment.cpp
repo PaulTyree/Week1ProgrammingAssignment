@@ -1,6 +1,7 @@
 // This program takes in the user data for: Their name; How many days they birded; How many hours they birded; How many birds they saw; and if it is winter or not.
 // This program outputs if the user had a good or bad birding day as well as a table of the user's statistics.
 
+
 //io stream is for inputs/outputs; string is for strings ; iomanip is to manipulate input/output data; fstream is to send and recieve data from files; windows.h is to help set colors to text.
 #include <iostream>
 #include <string>
